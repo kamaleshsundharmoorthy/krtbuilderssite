@@ -91,8 +91,8 @@ export const KRTLogo: React.FC<KRTLogoProps> = ({
             y="82"
             fill="#FFFFFF"
             fontSize="30"
-            fontFamily="'Syne', 'Plus Jakarta Sans', sans-serif"
-            fontWeight="900"
+            fontFamily="'Syne', 'Outfit', sans-serif"
+            fontWeight="800"
             textAnchor="middle"
             letterSpacing="2"
           >
@@ -104,8 +104,8 @@ export const KRTLogo: React.FC<KRTLogoProps> = ({
             x="220"
             y="82"
             fill="#FFFFFF"
-            fontSize="26"
-            fontFamily="'Syne', 'Plus Jakarta Sans', sans-serif"
+            fontSize="25"
+            fontFamily="'Syne', 'Outfit', sans-serif"
             fontWeight="800"
             textAnchor="middle"
             letterSpacing="3"
@@ -121,11 +121,11 @@ export const KRTLogo: React.FC<KRTLogoProps> = ({
             y="112"
             fill={taglineColor}
             fontSize="15"
-            fontFamily="'Playfair Display', Georgia, serif"
+            fontFamily="'Instrument Serif', 'Cormorant Garamond', Georgia, serif"
             fontStyle="italic"
-            fontWeight="600"
+            fontWeight="500"
             textAnchor="middle"
-            letterSpacing="1"
+            letterSpacing="1.5"
           >
             We build your future...
           </text>

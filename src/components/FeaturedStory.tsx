@@ -26,17 +26,17 @@ export const FeaturedStory: React.FC<FeaturedStoryProps> = ({
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="max-w-2xl">
-          <div className="flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-rose-400 mb-3">
+          <div className="flex items-center gap-2 text-xs font-bold uppercase tracking-[0.16em] text-rose-300 mb-3">
             <span>Featured Architectural Story</span>
-            <span aria-hidden="true">·</span>
+            <span aria-hidden="true" className="text-slate-500">/</span>
             <span>Case Study 02</span>
           </div>
 
-          <h2 className="text-3xl sm:text-5xl font-black text-white tracking-tight mb-4">
-            A HOME DESIGNED AROUND YOU.
+          <h2 className="editorial-title text-3xl sm:text-5xl lg:text-6xl font-extrabold text-white tracking-[-0.035em] mb-4">
+            A Home Designed Around You<span className="text-[#D32F2F]">.</span>
           </h2>
 
-          <p className="text-base sm:text-lg text-slate-300 mb-8 leading-relaxed text-balance">
+          <p className="text-base sm:text-lg text-slate-300 mb-8 leading-relaxed text-balance font-light">
             The Horizon Villa in Madurai: A striking 3,850 sq.ft contemporary cantilever residence featuring double-height ceiling volumes, automated acoustic glass facades, and deep passive solar overhangs.
           </p>
 

@@ -25,7 +25,7 @@ export const ProjectModal: React.FC<ProjectModalProps> = ({
         {/* Sticky Header with Title and Close */}
         <div className="flex items-center justify-between px-6 py-4 border-b border-slate-200 bg-white sticky top-0 z-20">
           <div>
-            <div className="flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-[#D32F2F]">
+            <div className="flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-[#B8594E]">
               <span>Case Study</span>
               <span aria-hidden="true">·</span>
               <span>{project.type}</span>
@@ -57,7 +57,7 @@ export const ProjectModal: React.FC<ProjectModalProps> = ({
             <div className="absolute inset-0 bg-gradient-to-t from-slate-950/70 via-transparent to-transparent" />
             <div className="absolute bottom-4 left-6 right-6 text-white flex flex-wrap items-center justify-between gap-2">
               <span className="text-sm font-semibold flex items-center gap-1.5">
-                <MapPin className="w-4 h-4 text-[#D32F2F]" />
+                <MapPin className="w-4 h-4 text-[#C86C60]" />
                 {project.location}
               </span>
               <span className="text-xs bg-black/60 backdrop-blur-sm px-3 py-1 rounded text-slate-200">
@@ -100,7 +100,7 @@ export const ProjectModal: React.FC<ProjectModalProps> = ({
               <h3 className="text-lg font-bold text-slate-900 mb-3 border-b border-slate-200 pb-2">
                 Architectural Concept
               </h3>
-              <p className="text-sm text-slate-700 leading-relaxed">
+              <p className="text-sm text-slate-700 leading-relaxed font-light">
                 {project.designConcept}
               </p>
             </div>
@@ -112,7 +112,7 @@ export const ProjectModal: React.FC<ProjectModalProps> = ({
               <ul className="space-y-2 text-sm text-slate-700">
                 {project.clientRequirements.map((req, i) => (
                   <li key={i} className="flex items-start gap-2">
-                    <CheckCircle2 className="w-4 h-4 text-[#D32F2F] shrink-0 mt-0.5" />
+                    <CheckCircle2 className="w-4 h-4 text-[#B8594E] shrink-0 mt-0.5" />
                     <span>{req}</span>
                   </li>
                 ))}
@@ -127,11 +127,11 @@ export const ProjectModal: React.FC<ProjectModalProps> = ({
             </h3>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
               {project.constructionStages.map((stage, idx) => (
-                <div key={idx} className="p-4 rounded bg-stone-50 border border-slate-200">
-                  <div className="text-xs font-bold text-[#D32F2F] uppercase mb-1">
+                <div key={idx} className="p-4 rounded-lg bg-stone-50 border border-slate-200">
+                  <div className="text-xs font-bold text-[#B8594E] uppercase mb-1">
                     Stage {idx + 1} · {stage.stage}
                   </div>
-                  <p className="text-xs text-slate-600 leading-relaxed">
+                  <p className="text-xs text-slate-600 leading-relaxed font-light">
                     {stage.description}
                   </p>
                 </div>
@@ -175,7 +175,7 @@ export const ProjectModal: React.FC<ProjectModalProps> = ({
                   key={idx}
                   onClick={() => setActiveImage(img)}
                   className={`relative rounded overflow-hidden h-24 border-2 transition-all cursor-pointer ${
-                    currentHeroImage === img ? 'border-[#D32F2F] scale-95' : 'border-transparent opacity-80 hover:opacity-100'
+                    currentHeroImage === img ? 'border-[#B8594E] scale-95' : 'border-transparent opacity-80 hover:opacity-100'
                   }`}
                 >
                   <img src={img} alt={`${project.title} detail ${idx + 1}`} className="w-full h-full object-cover" />
@@ -203,7 +203,7 @@ export const ProjectModal: React.FC<ProjectModalProps> = ({
                 onClose();
                 onBuildLikeThis(project.title);
               }}
-              className="w-1/2 sm:w-auto px-6 py-2.5 text-xs uppercase tracking-wider font-bold text-white bg-[#D32F2F] hover:bg-[#B71C1C] rounded shadow transition-colors flex items-center justify-center gap-2 cursor-pointer"
+              className="w-1/2 sm:w-auto px-6 py-2.5 text-xs uppercase tracking-wider font-bold text-white bg-[#B8594E] hover:bg-[#9E453A] rounded border border-rose-300/30 shadow-md shadow-[#B8594E]/25 transition-colors flex items-center justify-center gap-2 cursor-pointer active:scale-95"
             >
               <span>Build A Home Like This</span>
               <ArrowRight className="w-3.5 h-3.5" />

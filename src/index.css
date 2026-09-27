@@ -1,15 +1,17 @@
 @import "tailwindcss";
 
 @theme {
-  --font-display: "Syne", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-display: "Syne", "Outfit", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
   --font-sans: "Plus Jakarta Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-  --font-script: "Playfair Display", Georgia, serif;
+  --font-serif-luxury: "Instrument Serif", Georgia, serif;
   
   --color-krt-red: #D32F2F;
   --color-krt-red-hover: #B71C1C;
+  --color-krt-red-accent: #E11D48;
   --color-krt-red-soft: #FFF1F2;
-  --color-krt-black: #0F1218;
-  --color-krt-charcoal: #1A1F2C;
+  --color-krt-black: #090C11;
+  --color-krt-dark: #11151F;
+  --color-krt-charcoal: #181E29;
   --color-krt-stone: #F8FAFC;
   --color-krt-border: #E2E8F0;
 }
@@ -17,13 +19,141 @@
 html {
   scroll-behavior: smooth;
   font-family: var(--font-sans);
+  color-scheme: light dark;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
 }
 
+body {
+  font-family: var(--font-sans);
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  letter-spacing: -0.011em;
+}
+
+/* Modern Stylish Architectural Typography */
 h1, h2, h3, .font-display {
   font-family: var(--font-display);
-  letter-spacing: -0.02em;
+  letter-spacing: -0.035em;
+  font-feature-settings: "cv02", "cv03", "cv04", "cv11", "ss01";
 }
 
-.font-script {
-  font-family: var(--font-script);
+.font-serif-luxury {
+  font-family: var(--font-serif-luxury);
+  letter-spacing: -0.01em;
 }
+
+/* Modern Stylish Editorial Classes */
+.editorial-title {
+  font-family: var(--font-display);
+  letter-spacing: -0.035em;
+  line-height: 1.05;
+  font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+}
+
+.stylish-kicker {
+  font-family: var(--font-sans);
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  font-size: 0.72rem;
+  font-weight: 700;
+}
+
+/* Subtle Architectural Grid Pattern */
+.bg-architectural-grid {
+  background-image: radial-gradient(rgba(211, 47, 47, 0.08) 1px, transparent 0);
+  background-size: 24px 24px;
+}
+
+.bg-architectural-grid-dark {
+  background-image: radial-gradient(rgba(255, 255, 255, 0.07) 1px, transparent 0);
+  background-size: 28px 28px;
+}
+
+/* Subtle architectural hairline borders */
+.border-hairline {
+  border-color: rgba(226, 232, 240, 0.8);
+}
+
+.border-hairline-dark {
+  border-color: rgba(255, 255, 255, 0.08);
+}
+
+/* Sleek modern custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #090C11;
+}
+::-webkit-scrollbar-thumb {
+  background: #272F3D;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #D32F2F;
+}
+
+/* 3D View & Realistic Layered Shadows */
+.shadow-3d-subtle {
+  box-shadow: 
+    0 1px 2px rgba(0, 0, 0, 0.04),
+    0 4px 12px rgba(0, 0, 0, 0.05),
+    0 12px 24px -6px rgba(0, 0, 0, 0.04);
+}
+
+.shadow-3d-hover {
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 
+    0 2px 4px rgba(0, 0, 0, 0.04),
+    0 8px 16px -2px rgba(0, 0, 0, 0.06);
+}
+
+.shadow-3d-hover:hover {
+  transform: translateY(-8px) scale(1.01);
+  box-shadow: 
+    0 20px 35px -8px rgba(0, 0, 0, 0.12),
+    0 12px 20px -6px rgba(0, 0, 0, 0.08),
+    0 0 0 1px rgba(211, 47, 47, 0.15),
+    0 0 25px -4px rgba(211, 47, 47, 0.12);
+}
+
+.shadow-3d-dark {
+  box-shadow: 
+    0 10px 25px -5px rgba(0, 0, 0, 0.6),
+    0 8px 10px -6px rgba(0, 0, 0, 0.5),
+    inset 0 1px 0 rgba(255, 255, 255, 0.08);
+}
+
+.shadow-3d-dark-hover {
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.35s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.3s ease;
+  box-shadow: 
+    0 8px 20px -4px rgba(0, 0, 0, 0.5),
+    inset 0 1px 0 rgba(255, 255, 255, 0.07);
+}
+
+.shadow-3d-dark-hover:hover {
+  transform: translateY(-8px) scale(1.015);
+  box-shadow: 
+    0 25px 45px -10px rgba(0, 0, 0, 0.8),
+    0 15px 25px -8px rgba(0, 0, 0, 0.6),
+    0 0 35px -4px rgba(211, 47, 47, 0.3),
+    inset 0 1px 1px rgba(255, 255, 255, 0.15);
+}
+
+/* 3D floating badge animation */
+@keyframes float3D {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-6px) rotate(0.5deg);
+  }
+}
+
+.animate-float-3d {
+  animation: float3D 6s ease-in-out infinite;
+}
+

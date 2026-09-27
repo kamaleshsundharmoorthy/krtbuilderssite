@@ -21,7 +21,7 @@ export const MaterialModal: React.FC<MaterialModalProps> = ({
         {/* Header */}
         <div className="flex items-center justify-between px-6 py-4 border-b border-slate-200 bg-stone-50">
           <div>
-            <div className="text-xs font-bold uppercase tracking-wider text-[#D32F2F]">
+            <div className="text-xs font-bold uppercase tracking-wider text-[#B8594E]">
               Technical Specification Dossier
             </div>
             <h3 className="text-xl font-bold text-slate-900">
@@ -39,7 +39,7 @@ export const MaterialModal: React.FC<MaterialModalProps> = ({
 
         {/* Description */}
         <div className="p-6 bg-white border-b border-slate-100">
-          <p className="text-sm text-slate-600 mb-2">
+          <p className="text-sm text-slate-600 mb-2 font-light">
             {category.description}
           </p>
           <div className="flex items-center gap-2 text-xs text-amber-800 bg-amber-50 p-2.5 rounded border border-amber-200">
@@ -67,17 +67,17 @@ export const MaterialModal: React.FC<MaterialModalProps> = ({
                   <div className="font-bold text-slate-500 uppercase tracking-wider mb-1 text-[11px]">
                     Essential
                   </div>
-                  <p className="text-slate-700 leading-relaxed">
+                  <p className="text-slate-700 leading-relaxed font-light">
                     {item.essential}
                   </p>
                 </div>
 
                 {/* Signature */}
                 <div className="p-3 rounded bg-white border border-rose-200 ring-1 ring-rose-100">
-                  <div className="font-bold text-[#D32F2F] uppercase tracking-wider mb-1 text-[11px]">
+                  <div className="font-bold text-[#B8594E] uppercase tracking-wider mb-1 text-[11px]">
                     Signature (Popular)
                   </div>
-                  <p className="text-slate-800 leading-relaxed">
+                  <p className="text-slate-800 leading-relaxed font-medium">
                     {item.signature}
                   </p>
                 </div>
@@ -87,17 +87,17 @@ export const MaterialModal: React.FC<MaterialModalProps> = ({
                   <div className="font-bold text-slate-900 uppercase tracking-wider mb-1 text-[11px]">
                     Premium
                   </div>
-                  <p className="text-slate-800 leading-relaxed">
+                  <p className="text-slate-800 leading-relaxed font-light">
                     {item.premium}
                   </p>
                 </div>
 
                 {/* Luxury */}
                 <div className="p-3 rounded bg-slate-900 text-white border border-slate-800">
-                  <div className="font-bold text-rose-400 uppercase tracking-wider mb-1 text-[11px]">
+                  <div className="font-bold text-[#E8A59C] uppercase tracking-wider mb-1 text-[11px]">
                     Luxury Estate
                   </div>
-                  <p className="text-slate-200 leading-relaxed">
+                  <p className="text-slate-200 leading-relaxed font-light">
                     {item.luxury}
                   </p>
                 </div>

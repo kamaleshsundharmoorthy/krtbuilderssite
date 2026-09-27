@@ -79,20 +79,20 @@ export const PackageCustomizer: React.FC<PackageCustomizerProps> = ({
   };
 
   return (
-    <div className="mt-16 bg-slate-900 text-white rounded-lg border border-slate-800 p-6 sm:p-10 shadow-2xl relative overflow-hidden">
-      {/* Decorative Brand Glow */}
-      <div className="absolute -top-24 -right-24 w-96 h-96 bg-[#D32F2F]/15 rounded-full blur-3xl pointer-events-none" />
+    <div className="mt-16 bg-white text-slate-900 rounded-2xl border border-slate-200/90 p-6 sm:p-10 shadow-2xl relative overflow-hidden">
+      {/* Decorative Subtle Brand Glow */}
+      <div className="absolute -top-24 -right-24 w-96 h-96 bg-rose-500/5 rounded-full blur-3xl pointer-events-none" />
 
       {/* Header */}
       <div className="max-w-3xl mb-8 relative z-10">
-        <div className="flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-rose-400 mb-2">
+        <div className="flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-[#B8594E] mb-2">
           <Sparkles className="w-4 h-4" />
           <span>Interactive Estimation Platform</span>
         </div>
-        <h3 className="text-2xl sm:text-4xl font-extrabold tracking-tight">
+        <h3 className="text-2xl sm:text-4xl font-extrabold tracking-tight text-slate-900">
           CUSTOMIZE YOUR PACKAGE
         </h3>
-        <p className="text-xs sm:text-sm text-slate-300 mt-2">
+        <p className="text-xs sm:text-sm text-slate-600 mt-2 font-light">
           Tailor each building element to your taste. Combine our solid structural engineering framework with your preferred finishing materials to receive an immediate investment range.
         </p>
       </div>
@@ -102,7 +102,7 @@ export const PackageCustomizer: React.FC<PackageCustomizerProps> = ({
         <div className="lg:col-span-8 space-y-6">
           {/* Step 1: Base Tier Selection */}
           <div>
-            <label className="text-xs font-bold uppercase tracking-wider text-slate-400 block mb-2">
+            <label className="text-xs font-bold uppercase tracking-wider text-slate-500 block mb-2">
               1. Choose Starting Package Framework
             </label>
             <div className="grid grid-cols-2 sm:grid-cols-4 gap-2.5">
@@ -110,14 +110,14 @@ export const PackageCustomizer: React.FC<PackageCustomizerProps> = ({
                 <button
                   key={tier}
                   onClick={() => setBaseTier(tier)}
-                  className={`p-3 rounded text-left border transition-all cursor-pointer ${
+                  className={`p-3 rounded-lg text-left border transition-all cursor-pointer ${
                     baseTier === tier
-                      ? 'border-[#D32F2F] bg-rose-950/40 text-white ring-1 ring-[#D32F2F]'
-                      : 'border-slate-800 bg-slate-800/70 text-slate-300 hover:border-slate-700'
+                      ? 'border-[#B8594E] bg-rose-50/70 text-slate-950 ring-1 ring-[#B8594E] shadow-xs'
+                      : 'border-slate-200 bg-stone-50/70 text-slate-700 hover:border-slate-300 hover:bg-white'
                   }`}
                 >
                   <div className="text-xs font-bold capitalize">{tier}</div>
-                  <div className="text-[11px] text-slate-400 font-mono mt-0.5">
+                  <div className="text-[11px] text-slate-500 font-mono mt-0.5">
                     ~₹{baseRates[tier]}/sq.ft
                   </div>
                 </button>
@@ -126,11 +126,11 @@ export const PackageCustomizer: React.FC<PackageCustomizerProps> = ({
           </div>
 
           {/* Step 2: Area & Floor Sliders */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 p-4 rounded bg-slate-950/70 border border-slate-800">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 p-4 rounded-xl bg-stone-50/80 border border-slate-200">
             <div>
               <div className="flex justify-between items-center mb-2">
-                <span className="text-xs font-bold text-slate-300">Expected Built-Up Area</span>
-                <span className="text-xs font-mono font-bold text-rose-400">
+                <span className="text-xs font-bold text-slate-700">Expected Built-Up Area</span>
+                <span className="text-xs font-mono font-bold text-[#B8594E]">
                   {builtUpArea.toLocaleString()} sq.ft
                 </span>
               </div>
@@ -141,9 +141,9 @@ export const PackageCustomizer: React.FC<PackageCustomizerProps> = ({
                 step="100"
                 value={builtUpArea}
                 onChange={(e) => setBuiltUpArea(Number(e.target.value))}
-                className="w-full accent-[#D32F2F] cursor-pointer"
+                className="w-full accent-[#B8594E] cursor-pointer"
               />
-              <div className="flex justify-between text-[10px] text-slate-500 mt-1">
+              <div className="flex justify-between text-[10px] text-slate-500 mt-1 font-mono">
                 <span>1,200 sq.ft</span>
                 <span>3,500 sq.ft</span>
                 <span>6,000 sq.ft</span>
@@ -152,8 +152,8 @@ export const PackageCustomizer: React.FC<PackageCustomizerProps> = ({
 
             <div>
               <div className="flex justify-between items-center mb-2">
-                <span className="text-xs font-bold text-slate-300">Number of Floors</span>
-                <span className="text-xs font-mono font-bold text-rose-400">
+                <span className="text-xs font-bold text-slate-700">Number of Floors</span>
+                <span className="text-xs font-mono font-bold text-[#B8594E]">
                   {floors === 1 ? 'Ground Floor Only (G)' : `G + ${floors - 1} Floors`}
                 </span>
               </div>
@@ -162,10 +162,10 @@ export const PackageCustomizer: React.FC<PackageCustomizerProps> = ({
                   <button
                     key={f}
                     onClick={() => setFloors(f)}
-                    className={`flex-1 py-1.5 text-xs font-semibold rounded border cursor-pointer ${
+                    className={`flex-1 py-1.5 text-xs font-semibold rounded-lg border cursor-pointer transition-colors ${
                       floors === f
-                        ? 'bg-[#D32F2F] text-white border-[#D32F2F]'
-                        : 'bg-slate-800 text-slate-300 border-slate-700 hover:bg-slate-700'
+                        ? 'bg-[#B8594E] text-white border-[#B8594E] shadow-xs'
+                        : 'bg-white text-slate-700 border-slate-200 hover:bg-stone-100'
                     }`}
                   >
                     {f === 1 ? '1 Floor' : `${f} Floors`}
@@ -179,13 +179,13 @@ export const PackageCustomizer: React.FC<PackageCustomizerProps> = ({
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
             {/* Flooring */}
             <div>
-              <label className="text-xs font-bold text-slate-400 block mb-1.5">
+              <label className="text-xs font-bold text-slate-600 block mb-1.5">
                 Living & Bedroom Flooring
               </label>
               <select
                 value={flooringChoice}
                 onChange={(e) => setFlooringChoice(e.target.value)}
-                className="w-full text-xs bg-slate-950 border border-slate-700 rounded p-2.5 text-slate-200 focus:outline-none focus:ring-1 focus:ring-rose-500"
+                className="w-full text-xs bg-white border border-slate-300 rounded-lg p-2.5 text-slate-800 focus:outline-none focus:ring-1 focus:ring-[#B8594E]"
               >
                 <option value="Vitrified Double-Charged (600x600mm)">Vitrified Double-Charged (600x600mm)</option>
                 <option value="GVT Glazed Slabs (800x1600mm)">GVT Glazed Slabs (800x1600mm) [Recommended]</option>
@@ -196,13 +196,13 @@ export const PackageCustomizer: React.FC<PackageCustomizerProps> = ({
 
             {/* Kitchen */}
             <div>
-              <label className="text-xs font-bold text-slate-400 block mb-1.5">
+              <label className="text-xs font-bold text-slate-600 block mb-1.5">
                 Kitchen Countertop & Sink
               </label>
               <select
                 value={kitchenChoice}
                 onChange={(e) => setKitchenChoice(e.target.value)}
-                className="w-full text-xs bg-slate-950 border border-slate-700 rounded p-2.5 text-slate-200 focus:outline-none focus:ring-1 focus:ring-rose-500"
+                className="w-full text-xs bg-white border border-slate-300 rounded-lg p-2.5 text-slate-800 focus:outline-none focus:ring-1 focus:ring-[#B8594E]"
               >
                 <option value="Jet Black Granite with SS Franke Sink">Jet Black Granite with SS Franke Sink</option>
                 <option value="Engineered Quartz Countertop + Carysil Sink">Engineered Quartz Countertop + Carysil Sink (+₹65/sq.ft)</option>
@@ -212,13 +212,13 @@ export const PackageCustomizer: React.FC<PackageCustomizerProps> = ({
 
             {/* Bathrooms */}
             <div>
-              <label className="text-xs font-bold text-slate-400 block mb-1.5">
+              <label className="text-xs font-bold text-slate-600 block mb-1.5">
                 Sanitaryware & Bath CP Fittings
               </label>
               <select
                 value={bathroomChoice}
                 onChange={(e) => setBathroomChoice(e.target.value)}
-                className="w-full text-xs bg-slate-950 border border-slate-700 rounded p-2.5 text-slate-200 focus:outline-none focus:ring-1 focus:ring-rose-500"
+                className="w-full text-xs bg-white border border-slate-300 rounded-lg p-2.5 text-slate-800 focus:outline-none focus:ring-1 focus:ring-[#B8594E]"
               >
                 <option value="Parryware & Jaquar Classic">Parryware & Jaquar Classic</option>
                 <option value="Jaquar & Kohler Concealed Cisterns">Jaquar & Kohler Concealed Cisterns [Standard]</option>
@@ -229,13 +229,13 @@ export const PackageCustomizer: React.FC<PackageCustomizerProps> = ({
 
             {/* Smart Home */}
             <div>
-              <label className="text-xs font-bold text-slate-400 block mb-1.5">
+              <label className="text-xs font-bold text-slate-600 block mb-1.5">
                 Electrical & Smart Automation
               </label>
               <select
                 value={smartChoice}
                 onChange={(e) => setSmartChoice(e.target.value)}
-                className="w-full text-xs bg-slate-950 border border-slate-700 rounded p-2.5 text-slate-200 focus:outline-none focus:ring-1 focus:ring-rose-500"
+                className="w-full text-xs bg-white border border-slate-300 rounded-lg p-2.5 text-slate-800 focus:outline-none focus:ring-1 focus:ring-[#B8594E]"
               >
                 <option value="Standard Modular Concealed (Anchor/GM)">Standard Modular Concealed (Anchor/GM)</option>
                 <option value="Living & Master Bed Wi-Fi Smart Switches">Living & Master Bed Wi-Fi Smart Switches [Popular]</option>
@@ -247,44 +247,44 @@ export const PackageCustomizer: React.FC<PackageCustomizerProps> = ({
         </div>
 
         {/* Real-Time Cost Summary Box (4 cols) */}
-        <div className="lg:col-span-4 bg-slate-950 rounded-lg p-6 border border-slate-800 flex flex-col justify-between">
+        <div className="lg:col-span-4 bg-stone-50 rounded-xl p-6 border border-slate-200/90 shadow-sm flex flex-col justify-between">
           <div>
-            <div className="text-xs font-bold uppercase tracking-wider text-rose-400 mb-1">
+            <div className="text-xs font-bold uppercase tracking-wider text-[#B8594E] mb-1">
               Estimated Investment Range
             </div>
-            <div className="text-3xl sm:text-4xl font-extrabold text-white font-mono tabular-nums mb-1">
-              ₹{totalMin} – ₹{totalMax} <span className="text-lg font-sans font-normal text-slate-400">Lakhs</span>
+            <div className="text-3xl sm:text-4xl font-extrabold text-slate-900 font-mono tabular-nums mb-1">
+              ₹{totalMin} – ₹{totalMax} <span className="text-lg font-sans font-normal text-slate-600">Lakhs</span>
             </div>
-            <div className="text-xs text-slate-400 mb-4 font-mono">
+            <div className="text-xs text-slate-500 mb-4 font-mono">
               ~₹{calculatedRatePerSqFt.toLocaleString()} / sq.ft for {builtUpArea.toLocaleString()} sq.ft
             </div>
 
-            <div className="space-y-2 py-4 border-y border-slate-800 text-xs text-slate-300">
+            <div className="space-y-2 py-4 border-y border-slate-200 text-xs text-slate-600">
               <div className="flex justify-between">
                 <span>Base Framework:</span>
-                <span className="font-bold text-white capitalize">{baseTier}</span>
+                <span className="font-bold text-slate-900 capitalize">{baseTier}</span>
               </div>
               <div className="flex justify-between">
                 <span>Total Built-Up Area:</span>
-                <span className="font-bold text-white font-mono">{builtUpArea} sq.ft</span>
+                <span className="font-bold text-slate-900 font-mono">{builtUpArea} sq.ft</span>
               </div>
               <div className="flex justify-between">
                 <span>Floors:</span>
-                <span className="font-bold text-white">{floors} Floors</span>
+                <span className="font-bold text-slate-900">{floors} Floors</span>
               </div>
               <div className="flex justify-between">
                 <span>Civil Site Supervision:</span>
-                <span className="font-bold text-emerald-400">Included</span>
+                <span className="font-bold text-emerald-700">Included</span>
               </div>
               <div className="flex justify-between">
                 <span>10-Yr Structural Warranty:</span>
-                <span className="font-bold text-emerald-400">Included</span>
+                <span className="font-bold text-emerald-700">Included</span>
               </div>
             </div>
 
             {/* Mandatory Non-Binding Disclaimer */}
-            <div className="mt-4 p-3 rounded bg-slate-900 border border-slate-800 text-[11px] text-slate-400 leading-normal flex items-start gap-2">
-              <AlertCircle className="w-4 h-4 text-amber-500 shrink-0 mt-0.5" />
+            <div className="mt-4 p-3 rounded-lg bg-amber-50/70 border border-amber-200/80 text-[11px] text-amber-900 leading-normal flex items-start gap-2">
+              <AlertCircle className="w-4 h-4 text-amber-700 shrink-0 mt-0.5" />
               <span>
                 Final pricing depends on site conditions, built-up area, architectural design, specific material selections, and municipal requirements.
               </span>
@@ -294,7 +294,7 @@ export const PackageCustomizer: React.FC<PackageCustomizerProps> = ({
           <div className="mt-6 pt-4">
             <button
               onClick={handleTransferToForm}
-              className="w-full py-3.5 px-4 text-xs uppercase tracking-wider font-bold text-white bg-[#D32F2F] hover:bg-[#B71C1C] rounded shadow-lg shadow-rose-950/60 transition-all flex items-center justify-center gap-2 cursor-pointer active:scale-95"
+              className="w-full py-3.5 px-4 text-xs uppercase tracking-wider font-bold text-white bg-[#B8594E] hover:bg-[#9E453A] rounded-lg shadow-md shadow-[#B8594E]/20 transition-all flex items-center justify-center gap-2 cursor-pointer active:scale-95"
             >
               <span>Request Detailed BOQ Quotation</span>
               <ArrowRight className="w-4 h-4" />

@@ -19,15 +19,15 @@ export const Testimonials: React.FC = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="max-w-3xl mb-16">
-          <div className="flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-[#D32F2F] mb-3">
+          <div className="flex items-center gap-2 text-xs font-bold uppercase tracking-[0.16em] text-[#D32F2F] mb-3">
             <span>Verified Homeowners</span>
-            <span aria-hidden="true">·</span>
+            <span aria-hidden="true" className="text-slate-300">/</span>
             <span>Real Experiences</span>
           </div>
-          <h2 className="text-3xl sm:text-5xl font-extrabold text-slate-900 tracking-tight mb-4">
-            HOMES. STORIES. TRUST.
+          <h2 className="editorial-title text-3xl sm:text-5xl lg:text-6xl font-extrabold text-slate-900 tracking-[-0.035em] mb-4">
+            Homes. Stories. Trust<span className="text-[#D32F2F]">.</span>
           </h2>
-          <p className="text-base sm:text-lg text-slate-600 leading-relaxed text-balance">
+          <p className="text-base sm:text-lg text-slate-600 leading-relaxed text-balance font-light">
             Real families sharing their journey of building with KRT Builders across Sivagangai, Madurai, Karaikudi, and surrounding districts.
           </p>
         </div>
@@ -46,8 +46,8 @@ export const Testimonials: React.FC = () => {
             ))}
           </div>
 
-          {/* Quote Body */}
-          <blockquote className="text-lg sm:text-xl text-slate-800 font-normal leading-relaxed mb-8 italic">
+          {/* Quote Body with Luxury Serif Editorial Styling */}
+          <blockquote className="text-xl sm:text-2xl text-slate-800 font-serif-luxury font-normal leading-relaxed mb-8 italic">
             "{activeReview.quote}"
           </blockquote>
 

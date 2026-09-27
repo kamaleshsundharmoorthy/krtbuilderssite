@@ -64,19 +64,19 @@ export const ProjectEnquiry: React.FC<ProjectEnquiryProps> = ({ initialData }) =
   };
 
   return (
-    <section id="contact" className="py-24 bg-white text-slate-900 border-b border-slate-200">
+    <section id="contact" className="py-24 bg-white text-slate-800 border-b border-slate-200">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="max-w-3xl mb-16">
-          <div className="flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-[#D32F2F] mb-3">
+          <div className="flex items-center gap-2 text-xs font-bold uppercase tracking-[0.16em] text-[#B8594E] mb-3">
             <span>Direct Engineering Consultation</span>
-            <span aria-hidden="true">·</span>
+            <span aria-hidden="true" className="text-slate-400">/</span>
             <span>Er. Ashok Thangavel, B.E.</span>
           </div>
-          <h2 className="text-3xl sm:text-5xl font-extrabold text-slate-900 tracking-tight mb-4">
+          <h2 className="text-3xl sm:text-5xl lg:text-6xl font-black text-slate-900 tracking-[-0.03em] mb-4">
             START YOUR PROJECT.
           </h2>
-          <p className="text-base sm:text-lg text-slate-600 leading-relaxed text-balance">
+          <p className="text-base sm:text-lg text-slate-600 leading-relaxed text-balance font-light">
             Share your plot details, architectural ideas, or floor plan requirements. Our principal engineer will prepare a preliminary feasibility assessment and itemized estimate schedule.
           </p>
         </div>
@@ -84,14 +84,14 @@ export const ProjectEnquiry: React.FC<ProjectEnquiryProps> = ({ initialData }) =
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
           {/* Left Column: Direct Contact & Office Information (4 cols) */}
           <div className="lg:col-span-4 space-y-6">
-            <div className="p-6 rounded-lg bg-stone-50 border border-slate-200">
+            <div className="p-6 rounded-xl bg-[#FAF8F5] border border-slate-200/90 shadow-3d-card">
               <h3 className="text-lg font-bold text-slate-900 mb-4 pb-2 border-b border-slate-200">
                 Official Head Office
               </h3>
 
               <div className="space-y-4 text-xs text-slate-700">
                 <div className="flex items-start gap-3">
-                  <MapPin className="w-4 h-4 text-[#D32F2F] shrink-0 mt-0.5" />
+                  <MapPin className="w-4 h-4 text-[#B8594E] shrink-0 mt-0.5" />
                   <div>
                     <strong className="text-slate-900 block font-semibold">Address</strong>
                     <span>{companyInfo.contact.address}</span>
@@ -99,27 +99,27 @@ export const ProjectEnquiry: React.FC<ProjectEnquiryProps> = ({ initialData }) =
                 </div>
 
                 <div className="flex items-start gap-3">
-                  <Phone className="w-4 h-4 text-[#D32F2F] shrink-0 mt-0.5" />
+                  <Phone className="w-4 h-4 text-[#B8594E] shrink-0 mt-0.5" />
                   <div>
                     <strong className="text-slate-900 block font-semibold">Direct Phone</strong>
-                    <a href={`tel:${companyInfo.contact.phone}`} className="hover:text-[#D32F2F] font-mono font-medium">
+                    <a href={`tel:${companyInfo.contact.phone}`} className="hover:text-[#B8594E] font-mono font-medium">
                       {companyInfo.contact.phoneDisplay}
                     </a>
                   </div>
                 </div>
 
                 <div className="flex items-start gap-3">
-                  <Mail className="w-4 h-4 text-[#D32F2F] shrink-0 mt-0.5" />
+                  <Mail className="w-4 h-4 text-[#B8594E] shrink-0 mt-0.5" />
                   <div>
                     <strong className="text-slate-900 block font-semibold">Email Enquiries</strong>
-                    <a href={`mailto:${companyInfo.contact.email}`} className="hover:text-[#D32F2F]">
+                    <a href={`mailto:${companyInfo.contact.email}`} className="hover:text-[#B8594E]">
                       {companyInfo.contact.email}
                     </a>
                   </div>
                 </div>
 
                 <div className="flex items-start gap-3">
-                  <Clock className="w-4 h-4 text-[#D32F2F] shrink-0 mt-0.5" />
+                  <Clock className="w-4 h-4 text-[#B8594E] shrink-0 mt-0.5" />
                   <div>
                     <strong className="text-slate-900 block font-semibold">Office Hours</strong>
                     <span>{companyInfo.contact.workingHours}</span>
@@ -133,7 +133,7 @@ export const ProjectEnquiry: React.FC<ProjectEnquiryProps> = ({ initialData }) =
                   href={generateWhatsAppMessage()}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-full py-3 px-4 text-xs font-bold uppercase tracking-wider text-white bg-emerald-600 hover:bg-emerald-700 rounded transition-colors flex items-center justify-center gap-2 shadow-sm"
+                  className="w-full py-3 px-4 text-xs font-bold uppercase tracking-wider text-white bg-emerald-600 hover:bg-emerald-700 rounded-lg transition-colors flex items-center justify-center gap-2 shadow-xs"
                 >
                   <MessageSquare className="w-4 h-4" />
                   <span>Chat on WhatsApp Directly</span>
@@ -142,7 +142,7 @@ export const ProjectEnquiry: React.FC<ProjectEnquiryProps> = ({ initialData }) =
             </div>
 
             {/* Service Districts Covered */}
-            <div className="p-6 rounded-lg bg-stone-50 border border-slate-200 text-xs">
+            <div className="p-6 rounded-xl bg-[#FAF8F5] border border-slate-200/90 shadow-3d-card text-xs">
               <h4 className="font-bold text-slate-900 uppercase tracking-wider mb-2.5">
                 Primary Construction Regions:
               </h4>
@@ -157,7 +157,7 @@ export const ProjectEnquiry: React.FC<ProjectEnquiryProps> = ({ initialData }) =
           </div>
 
           {/* Right Column: High-Conversion Detailed Lead Form (8 cols) */}
-          <div className="lg:col-span-8 bg-stone-50 rounded-lg border border-slate-200 p-6 sm:p-8">
+          <div className="lg:col-span-8 bg-[#FAF8F5] rounded-2xl border border-slate-200/90 p-6 sm:p-8 shadow-3d-card">
             {submitted ? (
               <div className="py-12 text-center space-y-4">
                 <div className="w-16 h-16 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center mx-auto">
@@ -340,7 +340,7 @@ export const ProjectEnquiry: React.FC<ProjectEnquiryProps> = ({ initialData }) =
                     placeholder="Tell us about your family needs: e.g. courtyard, double-height ceiling, Vastu directions, solar provision, car parking..."
                     value={formData.requirements}
                     onChange={(e) => setFormData({ ...formData, requirements: e.target.value })}
-                    className="w-full text-xs p-2.5 bg-white border border-slate-300 rounded text-slate-900 focus:outline-none focus:ring-1 focus:ring-rose-500"
+                    className="w-full text-xs p-2.5 bg-white border border-slate-300 rounded text-slate-900 focus:outline-none focus:ring-1 focus:ring-[#B8594E]"
                   />
                 </div>
 
@@ -352,7 +352,7 @@ export const ProjectEnquiry: React.FC<ProjectEnquiryProps> = ({ initialData }) =
 
                   <button
                     type="submit"
-                    className="w-full sm:w-auto px-8 py-3.5 text-xs uppercase tracking-wider font-bold text-white bg-[#D32F2F] hover:bg-[#B71C1C] rounded shadow transition-all flex items-center justify-center gap-2 cursor-pointer active:scale-95"
+                    className="w-full sm:w-auto px-8 py-3.5 text-xs uppercase tracking-wider font-bold text-white bg-[#B8594E] hover:bg-[#9E453A] rounded border border-rose-300/30 shadow-md shadow-[#B8594E]/25 transition-all flex items-center justify-center gap-2 cursor-pointer active:scale-95"
                   >
                     <span>Request A Consultation</span>
                     <Send className="w-3.5 h-3.5" />

@@ -11,15 +11,15 @@ export const ConstructionProcess: React.FC = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="max-w-3xl mb-16">
-          <div className="flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-rose-400 mb-3">
+          <div className="flex items-center gap-2 text-xs font-bold uppercase tracking-[0.16em] text-rose-400 mb-3">
             <span>Rigorous 13-Stage Roadmap</span>
-            <span aria-hidden="true">·</span>
+            <span aria-hidden="true" className="text-slate-500">/</span>
             <span>Zero-Deviation Protocol</span>
           </div>
-          <h2 className="text-3xl sm:text-5xl font-extrabold text-white tracking-tight mb-4">
-            FROM PLOT TO HOME.
+          <h2 className="editorial-title text-3xl sm:text-5xl lg:text-6xl font-extrabold text-white tracking-[-0.035em] mb-4">
+            From Plot to Home<span className="text-[#D32F2F]">.</span>
           </h2>
-          <p className="text-base sm:text-lg text-slate-300 leading-relaxed text-balance">
+          <p className="text-base sm:text-lg text-slate-300 leading-relaxed text-balance font-light">
             Every home we build follows a transparent, phased engineering sequence. Each stage requires physical verification and milestone approval before progressing to the next.
           </p>
         </div>

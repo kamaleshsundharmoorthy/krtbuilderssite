@@ -21,14 +21,14 @@ export const FAQSection: React.FC = () => {
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-14">
-          <div className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-[#D32F2F] mb-3">
+          <div className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-[0.16em] text-[#D32F2F] mb-3">
             <HelpCircle className="w-4 h-4" />
             <span>Clarity Before Commitment</span>
           </div>
-          <h2 className="text-3xl sm:text-5xl font-extrabold text-slate-900 tracking-tight mb-4">
-            FREQUENTLY ASKED QUESTIONS
+          <h2 className="editorial-title text-3xl sm:text-5xl lg:text-6xl font-extrabold text-slate-900 tracking-[-0.035em] mb-4">
+            Frequently Asked Questions<span className="text-[#D32F2F]">.</span>
           </h2>
-          <p className="text-base text-slate-600">
+          <p className="text-base text-slate-600 font-light">
             Everything you need to know about architectural planning, construction contracts, materials, timelines, and handover.
           </p>
         </div>

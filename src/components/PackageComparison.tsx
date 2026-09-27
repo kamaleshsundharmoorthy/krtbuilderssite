@@ -36,13 +36,13 @@ export const PackageComparison: React.FC<PackageComparisonProps> = ({
       {/* Table Header Controls */}
       <div className="p-6 border-b border-slate-200 bg-stone-50 flex flex-col md:flex-row md:items-center justify-between gap-4">
         <div>
-          <span className="text-xs font-bold uppercase tracking-wider text-[#D32F2F] block mb-1">
+          <span className="text-xs font-bold uppercase tracking-wider text-[#B8594E] block mb-1">
             Material Specification Matrix
           </span>
           <h3 className="text-xl sm:text-2xl font-extrabold text-slate-900">
             Compare All 16 Construction Disciplines
           </h3>
-          <p className="text-xs text-slate-500 mt-1">
+          <p className="text-xs text-slate-500 mt-1 font-light">
             Expand any category below to inspect exact material brands, allowances, and finishes across each package level.
           </p>
         </div>
@@ -56,7 +56,7 @@ export const PackageComparison: React.FC<PackageComparisonProps> = ({
             id="cat-filter"
             value={selectedCategoryTab}
             onChange={(e) => setSelectedCategoryTab(e.target.value)}
-            className="text-xs font-semibold bg-white border border-slate-300 rounded px-3 py-2 text-slate-800 focus:outline-none focus:ring-1 focus:ring-rose-500"
+            className="text-xs font-semibold bg-white border border-slate-300 rounded px-3 py-2 text-slate-800 focus:outline-none focus:ring-1 focus:ring-[#B8594E]"
           >
             <option value="all">All 16 Disciplines</option>
             {materialSpecifications.map((cat) => (
@@ -72,7 +72,7 @@ export const PackageComparison: React.FC<PackageComparisonProps> = ({
       <div className="hidden lg:grid grid-cols-12 gap-4 px-6 py-4 bg-slate-900 text-white text-xs font-bold tracking-wider uppercase border-b border-slate-800">
         <div className="col-span-4 text-slate-300">Construction Category & Detail</div>
         <div className="col-span-2 text-slate-300">Essential</div>
-        <div className="col-span-2 text-rose-400 font-extrabold">Signature (Popular)</div>
+        <div className="col-span-2 text-[#E8A59C] font-extrabold">Signature (Popular)</div>
         <div className="col-span-2 text-slate-200">Premium</div>
         <div className="col-span-2 text-amber-300">Luxury Estate</div>
       </div>
@@ -90,7 +90,7 @@ export const PackageComparison: React.FC<PackageComparisonProps> = ({
                 className="p-5 px-6 flex items-center justify-between cursor-pointer hover:bg-stone-50 select-none"
               >
                 <div className="flex items-center gap-3">
-                  <div className="w-8 h-8 rounded-full bg-rose-50 border border-rose-200 flex items-center justify-center text-[#D32F2F]">
+                  <div className="w-8 h-8 rounded-full bg-rose-50 border border-rose-200/80 flex items-center justify-center text-[#B8594E]">
                     <Layers className="w-4 h-4" />
                   </div>
                   <div>
@@ -100,7 +100,7 @@ export const PackageComparison: React.FC<PackageComparisonProps> = ({
                         ({cat.items.length} items)
                       </span>
                     </h4>
-                    <p className="text-xs text-slate-500 line-clamp-1">
+                    <p className="text-xs text-slate-500 line-clamp-1 font-light">
                       {cat.description}
                     </p>
                   </div>
@@ -112,7 +112,7 @@ export const PackageComparison: React.FC<PackageComparisonProps> = ({
                       e.stopPropagation();
                       setActiveModalCategory(cat);
                     }}
-                    className="text-xs font-bold text-[#D32F2F] hover:underline flex items-center gap-1 p-1 px-2.5 rounded bg-rose-50 hover:bg-rose-100 transition-colors"
+                    className="text-xs font-bold text-[#B8594E] hover:underline flex items-center gap-1 p-1 px-2.5 rounded bg-rose-50 hover:bg-rose-100/70 transition-colors"
                   >
                     <span>Full Specs</span>
                     <ExternalLink className="w-3 h-3" />
@@ -154,7 +154,7 @@ export const PackageComparison: React.FC<PackageComparisonProps> = ({
 
                         {/* Signature */}
                         <div className="p-2.5 rounded bg-rose-50/50 border border-rose-200">
-                          <span className="font-bold text-[#D32F2F] uppercase tracking-wider block mb-1 text-[10px]">
+                          <span className="font-bold text-[#B8594E] uppercase tracking-wider block mb-1 text-[10px]">
                             Signature
                           </span>
                           <span className="text-slate-800 leading-normal block font-medium">

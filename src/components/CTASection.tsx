@@ -25,22 +25,22 @@ export const CTASection: React.FC<CTASectionProps> = ({
       </div>
 
       <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="inline-block text-xs font-bold uppercase tracking-widest text-rose-400 mb-4 bg-rose-950/50 px-3 py-1 rounded border border-rose-800">
+        <div className="inline-block text-xs font-bold uppercase tracking-[0.16em] text-rose-300 mb-4 bg-rose-950/60 backdrop-blur-md px-3.5 py-1.5 rounded border border-rose-800/60">
           Begin Your Journey
         </div>
 
-        <h2 className="text-3xl sm:text-5xl md:text-6xl font-black text-white tracking-tight mb-6 text-balance">
-          READY TO BUILD YOUR HOME?
+        <h2 className="editorial-title text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold text-white tracking-[-0.035em] mb-6 text-balance">
+          Ready to Build Your Home<span className="text-[#D32F2F]">?</span>
         </h2>
 
-        <p className="text-base sm:text-xl text-slate-300 max-w-2xl mx-auto mb-10 leading-relaxed text-balance">
+        <p className="text-base sm:text-lg md:text-xl text-slate-300 max-w-2xl mx-auto mb-10 leading-relaxed text-balance font-light">
           Tell us about your dream home. We'll help you turn the idea into reality with professional architectural planning, certified structural engineering, and honest pricing.
         </p>
 
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
           <button
             onClick={onStartProject}
-            className="w-full sm:w-auto px-8 py-4 text-xs sm:text-sm uppercase tracking-wider font-bold text-white bg-[#D32F2F] hover:bg-[#B71C1C] rounded shadow-xl shadow-rose-950/60 transition-all flex items-center justify-center gap-2 cursor-pointer"
+            className="w-full sm:w-auto px-8 py-4 text-xs sm:text-sm uppercase tracking-[0.16em] font-extrabold text-white bg-[#D32F2F] hover:bg-[#B71C1C] rounded border border-rose-500/50 shadow-2xl shadow-rose-950/70 transition-all flex items-center justify-center gap-2 cursor-pointer active:scale-95"
           >
             <span>Start A Project</span>
             <ArrowRight className="w-4 h-4" />
@@ -48,10 +48,10 @@ export const CTASection: React.FC<CTASectionProps> = ({
 
           <a
             href={`tel:${companyInfo.contact.phone}`}
-            className="w-full sm:w-auto px-7 py-4 text-xs sm:text-sm font-semibold text-slate-200 hover:text-white bg-slate-900/80 hover:bg-slate-800 border border-slate-700 rounded transition-all flex items-center justify-center gap-2 cursor-pointer"
+            className="w-full sm:w-auto px-7 py-4 text-xs sm:text-sm uppercase tracking-[0.14em] font-bold text-slate-200 hover:text-white bg-slate-900/80 hover:bg-slate-800 border border-white/15 rounded transition-all flex items-center justify-center gap-2 cursor-pointer backdrop-blur-md"
           >
             <Phone className="w-4 h-4 text-[#D32F2F]" />
-            <span>Call: {companyInfo.contact.phoneDisplay}</span>
+            <span className="font-mono">Call: {companyInfo.contact.phoneDisplay}</span>
           </a>
         </div>
       </div>
